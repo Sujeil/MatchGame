@@ -10,7 +10,22 @@ var MatchGame = {};
  */
 
 MatchGame.generateCardValues = function () {
+  var cardsInOrder = [];
+  var cardNumberOne = 1;
+  var cardNumberTwo = 1;
 
+  for (i = 0; cardsInOrder.length < 16; i++){
+    cardsInOrder.push(cardNumberOne);
+    cardNumberOne++;
+    cardsInOrder.push(cardNumberTwo);
+    cardNumberTwo++;
+  }
+
+  var cardsRandom = [];
+
+  while (cardsInOrder.length < cardsRandom.length) {
+    cardsRandom.push(cardsInOrder.sort(function (a, b) {return 0.5 - Math.random()}));
+  }
 };
 
 /*
