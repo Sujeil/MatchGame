@@ -9,19 +9,21 @@ var MatchGame = {};
   Generates and returns an array of matching card values.
  */
 
+
 MatchGame.generateCardValues = function () {
   var cardsInOrder = [];
 
-  for (i = 0; cardsInOrder.length < 16; i++){
-    cardsInOrder.push(cardNumberOne);
-    cardNumberOne++;
-    cardsInOrder.push(cardNumberTwo);
-    cardNumberTwo++;
+  for (i = 1; i <= 8; i++){
+    cardsInOrder.push(i);
+    cardsInOrder.push(i);
   }
-
+  
   var cardsRandom = [];
 
-  cardsRandom.push(...cardsInOrder.sort(function (a, b) {return 0.5 - Math.random()}));
+  cardsRandom.push(...cardsInOrder.sort(
+    function (a, b) {
+      return 0.5 - Math.random();
+    }));   
 
 };
 
